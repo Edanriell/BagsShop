@@ -1,0 +1,22 @@
+{
+  "feedback": [
+    {
+      "PersonName": "asda",
+      "PersonSurname": "asdad",
+      "PersonEmail": "asd@asda.lv",
+      "MessageTheme": "asdasasa",
+      "Message": "sadasdadsdsadasd",
+      "Politics": "on",
+      "id": 1
+    },
+    {
+      "PersonName": "asdas",
+      "PersonSurname": "asd",
+      "PersonEmail": "asdad@asda.lvaa",
+      "MessageTheme": "sdfsdf",
+      "Message": "sdsfsdfsd",
+      "Politics": "on",
+      "id": 2
+    }
+  ]
+}

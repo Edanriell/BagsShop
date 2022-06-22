@@ -1,0 +1,79 @@
+$postHeaderColor: #1c1c2a
+$postPublactionTimeColor: #1c1c2a
+$postTextColor: #9a9a9a
+$postLinkColor: #1c1c2a
+
+.News
+	padding-bottom: 5.989583333333334vw
+	padding-left: 1.3020833333333335vw // Fix for slider underlay
+	padding-right: 1.3020833333333335vw // Fix for slider underlay
+	&-Content
+		background: no-repeat url("../images/zebrabg.png")
+		background-position: 0 2.864583333333333vw
+		background-size: 100%
+.NewsList
+	padding-left: 1.3541666666666667vw // Fix for slider
+	padding-top: 5.989583333333334vw
+	&-Item
+		position: relative
+		width: 16.40625vmax
+		height: 26.5625vmax
+.Post
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	width: 16.40625vmax
+	height: 26.4vmax
+	box-sizing: border-box
+	&-Header
+		font-family: "Roboto-Bold"
+		font-style: normal
+		font-weight: 700
+		font-size: 1.25vmax
+		text-transform: uppercase
+		color: $postHeaderColor
+		order: 2
+		margin-bottom: 0.78125vw
+	&-Image
+		order: -1
+		width: 16.40625vmax
+		height: 12.5vmax
+		margin-bottom: 1.3020833333333335vw
+	&-PublicationTime
+		font-family: "Roboto-Bold"
+		font-style: normal
+		font-weight: 700
+		font-size: 0.78125vmax
+		color: $postPublactionTimeColor
+		order: 1
+		margin-bottom: 1.3020833333333335vw
+		line-height: 0.78125vmax
+	&-Text
+		font-family: "Roboto-Medium"
+		font-style: normal
+		font-weight: 500
+		font-size: 0.7291666666666666vmax
+		color: $postTextColor
+		order: 3
+		text-overflow: ellipsis
+		overflow: hidden
+	&-Link
+		font-family: "Roboto-Bold"
+		font-style: normal
+		font-weight: 700
+		font-size: 0.8020833333333333vmax
+		display: flex
+		align-items: center
+		color: $postLinkColor
+		order: 4
+		align-self: flex-end
+		margin-top: 2.083333333333333vw
+		line-height: 0.8020833333333333vmax
+		&::after
+			content: ""
+			width: 1.8229166666666667vmax
+			height: 0.9375vmax
+			background: no-repeat svg-load("../images/arrow-right.svg", color=#1c1c2a, width="35px", height="18px")
+			transition: all 0.6s ease-in-out
+		&:hover::after
+			background-position: 6px 0

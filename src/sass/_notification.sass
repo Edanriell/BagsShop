@@ -1,0 +1,58 @@
+.Notification
+	position: relative
+	width: 640px
+	min-height: 120px
+	background: #FFF
+	display: flex
+	align-items: center
+	padding: 30px
+	box-sizing: border-box
+	color: #000
+	border-radius: 10px
+	&-Wrapper
+		position: fixed
+		bottom: 40px
+		left: 35%
+		transform: translateX(-50%)
+		box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px
+		z-index: 999
+		border-radius: 10px
+	&-IconWrapper
+	&-Icon
+		width: 40px
+		height: 40px
+	&-Text
+		margin-left: 16px
+		font-family: inherit
+		font-size: 1.6rem
+	&-CloseBtn
+		position: absolute
+		width: 20px
+		height: 20px
+		background: red
+		top: 10px
+		right: 10px
+		background: no-repeat url("../images/close-notification-gray.svg") center
+		transition: all 0.2s ease-in-out
+		cursor: pointer
+		&:hover
+			transform: rotate(-180deg) scale(1.2)
+			background: no-repeat url("../images/close-notification-black.svg") center
+.ErrorFadeIn
+	animation: error-fade-in 0.3s linear both
+@keyframes error-fade-in
+	0%
+		transform: translateY(50px)
+		opacity: 0
+	100%
+		transform: translateY(0)
+		opacity: 1
+.ErrorFadeOut
+	animation: fade-out-bottom 0.2s linear both
+@keyframes fade-out-bottom
+	0%
+		transform: translateY(0)
+		opacity: 1
+	100%
+		transform: translateY(50px)
+		opacity: 0

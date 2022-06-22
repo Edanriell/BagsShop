@@ -1,0 +1,56 @@
+$headerBackgroundColor: transparent
+$menuTextColor: #a1a1a1
+$menuTextColorOnHover: #2b2b38
+$menuLinkUnderlineColor: #b59d8d
+$menuTextSize: 1.04vmax
+
+.Header
+	background-color: $headerBackgroundColor
+.MainNav
+	display: flex
+	padding-top: 3.69vw
+	padding-bottom: 2.65vw
+.Logotype
+	width: 8.48vmax
+	height: 4.68vmax
+	pointer-events: none
+	&-Wrapper
+		margin-right: 9.68vw
+		pointer-events: none
+.Menu
+	display: flex
+	aling-items: center
+	flex-wrap: wrap
+	&-Item
+		margin-top: 2.6562vw
+		margin-right: 3.125vw
+		&:last-child
+			margin-right: 0
+	&-Link
+		color: $menuTextColor
+		transition: all 0.25s ease-in-out
+		font-size: $menuTextSize
+		position: relative
+		&:hover
+			color: $menuTextColorOnHover
+		&:hover:before
+			left: -10px
+			width: 29px
+			transition: all 0.25s ease-in-out
+		&:before
+			position: absolute
+			bottom: -5px
+			left: 20px
+			width: 0
+			height: 2px
+			content: ""
+			transition: all 0.25s ease-in-out
+			background-color: $menuLinkUnderlineColor
+
+@media screen and ( max-width: 1720px)
+	.MainNav
+		display: flex
+		flex-direction: column
+		align-items: center
+	.Logotype-Wrapper
+		margin-right: 0

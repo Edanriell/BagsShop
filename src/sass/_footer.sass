@@ -1,0 +1,112 @@
+$footerBackgroundColor: #f3f3f1
+$nameColumnTextColor: #2a2a37
+$footerMenuLinkColor: #9a9a9a
+$footerMenuLinkHoverColor: #9a9a9a
+$footerMenuLinkUnderlineColor: #d2d2d1
+$icons: "../images/vk.svg" 1 22px 13px, "../images/facebook.svg" 2 8px 15px, "../images/twitter.svg" 3 20px 15px
+
+@each $iconUrl, $itemIndex, $width, $height in $icons
+	.SocialLinksList
+		&-Item:nth-of-type(#{$itemIndex})
+			> a
+				background: no-repeat url($iconUrl) center
+				width: $width
+				height: $height
+				transition: all 0.6s ease-in-out
+				&:hover
+					transform: scale(1.2)
+
+.Footer
+	background: $footerBackgroundColor
+	&-Content
+		display: flex
+		align-items: flex-start
+		padding-top: 3.125vw
+		padding-bottom: 3.6458333333333335vw
+		padding-left: 4.166666666666666vw !important
+		padding-right: 4.166666666666666vw !important
+		flex-wrap: wrap
+.FooterMenu
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	&-Content
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		width: 9.375vmax
+		&:nth-child(1)
+			margin-right: 7.8125vmax
+		&:nth-child(2)
+			margin-right: 3.125vmax
+		&:nth-child(3)
+			margin-right: 5.729166666666666vmax
+	&-Name
+		font-family: "Roboto-Medium"
+		font-style: normal
+		font-weight: 500
+		color: $nameColumnTextColor
+		margin-bottom: 1.0416666666666665vw
+	&-ItemsList
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+	&-Item
+		margin-bottom: 0.5208333333333333vw
+	&-Link
+		color: $footerMenuLinkColor
+		position: relative
+		transition: all 0.25s ease-in-out
+		position: relative
+		&:hover
+			color: $footerMenuLinkHoverColor
+		&:hover:before
+			right: 0
+			width: 100%
+			transition: all 0.25s ease-in-out
+		&:before
+			position: absolute
+			bottom: -2px
+			right: 0
+			width: 0
+			height: 2px
+			content: ""
+			transition: all 0.25s ease-in-out
+			background-color: $footerMenuLinkUnderlineColor
+		// &::after
+		// 	content: ""
+		// 	bottom: 2px
+		// 	left: 0
+		// 	width: 100%
+		// 	height: 2px
+		// 	position: absolute
+		// 	background-color: #d2d2d1
+.SocialLinksList
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-bottom: 0.8854166666666666vw
+	margin-top: 0.3125vw
+	&-Item
+		margin-right: 0.7291666666666666vw
+		&:last-child
+			margin-right: 0
+	&-Link
+		display: block
+
+@media screen and ( max-width: 1000px)
+	.Footer
+		background: $footerBackgroundColor
+		&-Content
+			justify-content: center
+	.FooterMenu
+		justify-content: center
+		align-items: center
+		&-Content
+			width: 200px
+			text-align: center
+			align-items: center
+			margin-top: 20px
+			margin-right: 0 !important
+	.SocialLinksList
+		margin-top: 30px

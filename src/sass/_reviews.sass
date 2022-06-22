@@ -1,0 +1,58 @@
+$reviewsListBackgroundColor: #f4f4f2
+$reviewsSplitterColor: #e7e3de
+$reviewTextColor: #959595
+
+.Reviews
+	padding-bottom: 5.729166666666666vw
+.ReviewsList
+	margin: 2.864583333333333vw auto 0 auto !important
+	display: flex
+	align-items: center
+	justify-content: space-between
+	background-color: $reviewsListBackgroundColor
+	&-Item
+		display: flex
+		align-items: center
+		&::after
+			content: ""
+			width: 0.052083333333333336vmax
+			height: 12.34375vmax
+			background-color: $reviewsSplitterColor
+		&:last-child::after
+			display: none
+.Review
+	width: 20.052083333333336vmax
+	height: 13.28125vmax
+	box-sizing: border-box
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding-top: 2.34375vw
+	padding-bottom: 2.34375vw
+	&-Text
+		text-align: center
+		font-size: 0.8333333333333334vmax
+		color: $reviewTextColor
+		max-width: 14.583333333333334vmax
+	&-Author
+		display: block
+		text-align: center
+		font-family: "Roboto-Medium"
+		font-style: normal
+		font-weight: 500
+		font-size: 0.8333333333333334vmax
+		color: #1c1c2a
+		line-height: 0.8333333333333334vmax
+		margin-top: 1.5625vw
+
+@media screen and ( max-width: 1000px)
+	.ReviewsList
+		flex-direction: column
+		background-color: transparent
+		&-Item
+			flex-direction: column
+			background: #f4f4f2
+			&::after
+				content: ""
+				width: 12.34375vmax
+				height: 1px
